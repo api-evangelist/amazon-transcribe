@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "transcribe": "https://docs.aws.amazon.com/transcribe/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+    "status": "schema:status",
+    "provider": {
+      "@id": "schema:provider",
+      "@type": "schema:Organization"
+    },
+    "TranscriptionJob": {
+      "@id": "transcribe:API_StartTranscriptionJob.html",
+      "@context": {
+        "TranscriptionJobName": "schema:name",
+        "TranscriptionJobStatus": "schema:status",
+        "LanguageCode": "schema:inLanguage",
+        "Media": "transcribe:Media",
+        "MediaFileUri": "schema:contentUrl",
+        "Transcript": "transcribe:Transcript",
+        "TranscriptFileUri": "schema:url",
+        "CreationTime": "schema:dateCreated",
+        "StartTime": "schema:startDate",
+        "CompletionTime": "schema:endDate"
+      }
+    },
+    "Vocabulary": {
+      "@id": "transcribe:API_CreateVocabulary.html",
+      "@context": {
+        "VocabularyName": "schema:name",
+        "LanguageCode": "schema:inLanguage",
+        "VocabularyState": "schema:status",
+        "LastModifiedTime": "schema:dateModified"
+      }
+    },
+    "VocabularyFilter": {
+      "@id": "transcribe:API_CreateVocabularyFilter.html",
+      "@context": {
+        "VocabularyFilterName": "schema:name",
+        "LanguageCode": "schema:inLanguage",
+        "LastModifiedTime": "schema:dateModified"
+      }
+    },
+    "Tag": {
+      "@id": "transcribe:Tag",
+      "@context": {
+        "Key": "schema:name",
+        "Value": "schema:value"
+      }
+    }
+  }
+}

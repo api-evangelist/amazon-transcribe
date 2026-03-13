@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://transcribe.amazonaws.com/schemas/transcription-job",
+  "title": "Amazon Transcribe Transcription Job",
+  "description": "Schema representing an Amazon Transcribe transcription job resource.",
+  "type": "object",
+  "required": [
+    "TranscriptionJobName",
+    "Media"
+  ],
+  "properties": {
+    "TranscriptionJobName": {
+      "type": "string",
+      "description": "The name of the transcription job.",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "^[0-9a-zA-Z._-]+$"
+    },
+    "TranscriptionJobStatus": {
+      "type": "string",
+      "description": "The status of the transcription job.",
+      "enum": [
+        "QUEUED",
+        "IN_PROGRESS",
+        "FAILED",
+        "COMPLETED"
+      ]
+    },
+    "LanguageCode": {
+      "type": "string",
+      "description": "The language code for the input audio.",
+      "pattern": "^[a-z]{2}-[A-Z]{2}$"
+    },
+    "MediaSampleRateHertz": {
+      "type": "integer",
+      "description": "The sample rate of the input audio in Hz.",
+      "minimum": 8000,
+      "maximum": 48000
+    },
+    "MediaFormat": {
+      "type": "string",
+      "description": "The format of the input media file.",
+      "enum": [
+        "mp3",
+        "mp4",
+        "wav",
+        "flac",
+        "ogg",
+        "amr",
+        "webm"
+      ]
+    },
+    "Media": {
+      "type": "object",
+      "description": "The location of the input media file.",
+      "required": [
+        "MediaFileUri"
+      ],
+      "properties": {
+        "MediaFileUri": {
+          "type": "string",
+          "description": "The S3 location of the input media file.",
+          "maxLength": 2000,
+          "pattern": "^(s3|https)://.*$"
+        },
+        "RedactedMediaFileUri": {
+          "type": "string",
+          "description": "The S3 location of the redacted media file."
+        }
+      }
+    },
+    "Transcript": {
+      "type": "object",
+      "description": "The location of the transcription output.",
+      "properties": {
+        "TranscriptFileUri": {
+          "type": "string",
+          "description": "The S3 location of the transcription output."
+        },
+        "RedactedTranscriptFileUri": {
+          "type": "string",
+          "description": "The S3 location of the redacted transcription output."
+        }
+      }
+    },
+    "Settings": {
+      "type": "object",
+      "description": "Optional settings for the transcription job.",
+      "properties": {
+        "VocabularyName": {
+          "type": "string",
+          "description": "The name of a vocabulary to use for transcription."
+        },
+        "ShowSpeakerLabels": {
+          "type": "boolean",
+          "description": "Whether to identify different speakers in the audio."
+        },
+        "MaxSpeakerLabels": {
+          "type": "integer",
+          "description": "The maximum number of speakers to identify.",
+          "minimum": 2,
+          "maximum": 10
+        },
+        "ShowAlternatives": {
+          "type": "boolean",
+          "description": "Whether to show alternative transcriptions."
+        },
+        "MaxAlternatives": {
+          "type": "integer",
+          "description": "The number of alternative transcriptions.",
+          "minimum": 2,
+          "maximum": 10
+        }
+      }
+    },
+    "CreationTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "A timestamp indicating when the job was created."
+    },
+    "StartTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "A timestamp indicating when the job started processing."
+    },
+    "CompletionTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "A timestamp indicating when the job was completed."
+    },
+    "FailureReason": {
+      "type": "string",
+      "description": "The reason the job failed, if applicable."
+    },
+    "Tags": {
+      "type": "array",
+      "description": "A list of tags associated with the transcription job.",
+      "items": {
+        "$ref": "#/$defs/Tag"
+      },
+      "maxItems": 200
+    }
+  },
+  "$defs": {
+    "Tag": {
+      "type": "object",
+      "description": "A key-value pair for tagging resources.",
+      "required": [
+        "Key",
+        "Value"
+      ],
+      "properties": {
+        "Key": {
+          "type": "string",
+          "description": "The tag key.",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "Value": {
+          "type": "string",
+          "description": "The tag value.",
+          "minLength": 0,
+          "maxLength": 256
+        }
+      }
+    }
+  }
+}

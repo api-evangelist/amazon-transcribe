@@ -1,0 +1,272 @@
+openapi: 3.1.0
+info:
+  title: Amazon Transcribe API
+  description: >-
+    Amazon Transcribe is an automatic speech recognition (ASR) service that
+    makes it easy to add speech-to-text capability to applications. The API
+    supports batch transcription jobs, real-time streaming transcription,
+    custom vocabularies, and vocabulary filters.
+  version: '2017-10-26'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/transcribe/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+externalDocs:
+  description: Amazon Transcribe API Reference
+  url: https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html
+servers:
+  - url: https://transcribe.{region}.amazonaws.com
+    description: Amazon Transcribe regional endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - eu-west-1
+          - eu-west-2
+          - eu-central-1
+          - ap-northeast-1
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-south-1
+          - ca-central-1
+paths:
+  /#StartTranscriptionJob:
+    post:
+      operationId: StartTranscriptionJob
+      summary: Start a batch transcription job
+      description: >-
+        Starts an asynchronous job to transcribe speech to text from an audio
+        file stored in Amazon S3.
+      tags:
+        - Transcription Jobs
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - TranscriptionJobName
+                - Media
+              properties:
+                TranscriptionJobName:
+                  type: string
+                  description: A unique name for the transcription job.
+                LanguageCode:
+                  type: string
+                  description: The language code for the input audio.
+                Media:
+                  type: object
+                  properties:
+                    MediaFileUri:
+                      type: string
+                      description: The S3 location of the input media file.
+                OutputBucketName:
+                  type: string
+                  description: The S3 bucket to store the transcription output.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  TranscriptionJob:
+                    $ref: '#/components/schemas/TranscriptionJob'
+  /#GetTranscriptionJob:
+    post:
+      operationId: GetTranscriptionJob
+      summary: Get transcription job details
+      description: Returns information about a transcription job.
+      tags:
+        - Transcription Jobs
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - TranscriptionJobName
+              properties:
+                TranscriptionJobName:
+                  type: string
+                  description: The name of the transcription job.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  TranscriptionJob:
+                    $ref: '#/components/schemas/TranscriptionJob'
+  /#ListTranscriptionJobs:
+    post:
+      operationId: ListTranscriptionJobs
+      summary: List transcription jobs
+      description: Lists transcription jobs with optional filtering.
+      tags:
+        - Transcription Jobs
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                Status:
+                  type: string
+                  enum:
+                    - QUEUED
+                    - IN_PROGRESS
+                    - FAILED
+                    - COMPLETED
+                MaxResults:
+                  type: integer
+                NextToken:
+                  type: string
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  TranscriptionJobSummaries:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TranscriptionJob'
+  /#DeleteTranscriptionJob:
+    post:
+      operationId: DeleteTranscriptionJob
+      summary: Delete a transcription job
+      description: Deletes a transcription job and any related information.
+      tags:
+        - Transcription Jobs
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - TranscriptionJobName
+              properties:
+                TranscriptionJobName:
+                  type: string
+      responses:
+        '200':
+          description: Successful response.
+  /#CreateVocabulary:
+    post:
+      operationId: CreateVocabulary
+      summary: Create a custom vocabulary
+      description: Creates a new custom vocabulary for improving transcription accuracy.
+      tags:
+        - Vocabularies
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - VocabularyName
+                - LanguageCode
+              properties:
+                VocabularyName:
+                  type: string
+                LanguageCode:
+                  type: string
+                Phrases:
+                  type: array
+                  items:
+                    type: string
+                VocabularyFileUri:
+                  type: string
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  VocabularyName:
+                    type: string
+                  VocabularyState:
+                    type: string
+components:
+  schemas:
+    TranscriptionJob:
+      type: object
+      properties:
+        TranscriptionJobName:
+          type: string
+          description: The name of the transcription job.
+        TranscriptionJobStatus:
+          type: string
+          enum:
+            - QUEUED
+            - IN_PROGRESS
+            - FAILED
+            - COMPLETED
+        LanguageCode:
+          type: string
+        MediaFormat:
+          type: string
+        Media:
+          type: object
+          properties:
+            MediaFileUri:
+              type: string
+        Transcript:
+          type: object
+          properties:
+            TranscriptFileUri:
+              type: string
+        CreationTime:
+          type: string
+          format: date-time
+        CompletionTime:
+          type: string
+          format: date-time
+    Tag:
+      type: object
+      properties:
+        Key:
+          type: string
+        Value:
+          type: string
+      required:
+        - Key
+        - Value
+  parameters:
+    XAmzTarget:
+      name: X-Amz-Target
+      in: header
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    aws_sig_v4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4 authentication.
+security:
+  - aws_sig_v4: []
