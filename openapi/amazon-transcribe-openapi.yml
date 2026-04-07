@@ -270,3 +270,6 @@ components:
       description: AWS Signature Version 4 authentication.
 security:
   - aws_sig_v4: []
+tags:
+  - name: Transcription Jobs
+  - name: Vocabularies
