@@ -43,7 +43,7 @@ paths:
   /#StartTranscriptionJob:
     post:
       operationId: StartTranscriptionJob
-      summary: Start a batch transcription job
+      summary: Amazon Transcribe Start a batch transcription job
       description: >-
         Starts an asynchronous job to transcribe speech to text from an audio
         file stored in Amazon S3.
@@ -87,7 +87,7 @@ paths:
   /#GetTranscriptionJob:
     post:
       operationId: GetTranscriptionJob
-      summary: Get transcription job details
+      summary: Amazon Transcribe Get transcription job details
       description: Returns information about a transcription job.
       tags:
         - Transcription Jobs
@@ -116,7 +116,7 @@ paths:
   /#ListTranscriptionJobs:
     post:
       operationId: ListTranscriptionJobs
-      summary: List transcription jobs
+      summary: Amazon Transcribe List transcription jobs
       description: Lists transcription jobs with optional filtering.
       tags:
         - Transcription Jobs
@@ -153,7 +153,7 @@ paths:
   /#DeleteTranscriptionJob:
     post:
       operationId: DeleteTranscriptionJob
-      summary: Delete a transcription job
+      summary: Amazon Transcribe Delete a transcription job
       description: Deletes a transcription job and any related information.
       tags:
         - Transcription Jobs
@@ -174,7 +174,7 @@ paths:
   /#CreateVocabulary:
     post:
       operationId: CreateVocabulary
-      summary: Create a custom vocabulary
+      summary: Amazon Transcribe Create a custom vocabulary
       description: Creates a new custom vocabulary for improving transcription accuracy.
       tags:
         - Vocabularies
