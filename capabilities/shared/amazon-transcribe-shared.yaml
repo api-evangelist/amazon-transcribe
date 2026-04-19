@@ -1,0 +1,25 @@
+id: amazon-transcribe
+name: Amazon Transcribe
+description: Shared capability definition for Amazon Transcribe
+namespace: amazon-transcribe
+operations:
+- operationId: StartTranscriptionJob
+  method: POST
+  path: /#StartTranscriptionJob
+  summary: Amazon Transcribe Start a Batch Transcription Job
+- operationId: GetTranscriptionJob
+  method: POST
+  path: /#GetTranscriptionJob
+  summary: Amazon Transcribe Get Transcription Job Details
+- operationId: ListTranscriptionJobs
+  method: POST
+  path: /#ListTranscriptionJobs
+  summary: Amazon Transcribe List Transcription Jobs
+- operationId: DeleteTranscriptionJob
+  method: POST
+  path: /#DeleteTranscriptionJob
+  summary: Amazon Transcribe Delete a Transcription Job
+- operationId: CreateVocabulary
+  method: POST
+  path: /#CreateVocabulary
+  summary: Amazon Transcribe Create a Custom Vocabulary

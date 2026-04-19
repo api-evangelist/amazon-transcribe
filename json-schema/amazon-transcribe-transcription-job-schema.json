@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "TranscriptionJobName": {
+      "type": "string",
+      "description": "The name of the transcription job."
+    },
+    "TranscriptionJobStatus": {
+      "type": "string",
+      "enum": [
+        "QUEUED",
+        "IN_PROGRESS",
+        "FAILED",
+        "COMPLETED"
+      ]
+    },
+    "LanguageCode": {
+      "type": "string"
+    },
+    "MediaFormat": {
+      "type": "string"
+    },
+    "Media": {
+      "type": "object",
+      "properties": {
+        "MediaFileUri": {
+          "type": "string"
+        }
+      }
+    },
+    "Transcript": {
+      "type": "object",
+      "properties": {
+        "TranscriptFileUri": {
+          "type": "string"
+        }
+      }
+    },
+    "CreationTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "CompletionTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TranscriptionJob"
+}

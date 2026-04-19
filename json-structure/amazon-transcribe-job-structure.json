@@ -1,0 +1,85 @@
+{
+  "name": "Amazon Transcribe Transcription Job",
+  "description": "Schema representing an Amazon Transcribe transcription job resource.",
+  "type": "object",
+  "properties": [
+    {
+      "name": "TranscriptionJobName",
+      "type": "string",
+      "description": "The name of the transcription job.",
+      "required": true
+    },
+    {
+      "name": "TranscriptionJobStatus",
+      "type": "string",
+      "description": "The status of the transcription job.",
+      "required": false
+    },
+    {
+      "name": "LanguageCode",
+      "type": "string",
+      "description": "The language code for the input audio.",
+      "required": false
+    },
+    {
+      "name": "MediaSampleRateHertz",
+      "type": "integer",
+      "description": "The sample rate of the input audio in Hz.",
+      "required": false
+    },
+    {
+      "name": "MediaFormat",
+      "type": "string",
+      "description": "The format of the input media file.",
+      "required": false
+    },
+    {
+      "name": "Media",
+      "type": "object",
+      "description": "The location of the input media file.",
+      "required": true
+    },
+    {
+      "name": "Transcript",
+      "type": "object",
+      "description": "The location of the transcription output.",
+      "required": false
+    },
+    {
+      "name": "Settings",
+      "type": "object",
+      "description": "Optional settings for the transcription job.",
+      "required": false
+    },
+    {
+      "name": "CreationTime",
+      "type": "string",
+      "description": "A timestamp indicating when the job was created.",
+      "required": false
+    },
+    {
+      "name": "StartTime",
+      "type": "string",
+      "description": "A timestamp indicating when the job started processing.",
+      "required": false
+    },
+    {
+      "name": "CompletionTime",
+      "type": "string",
+      "description": "A timestamp indicating when the job was completed.",
+      "required": false
+    },
+    {
+      "name": "FailureReason",
+      "type": "string",
+      "description": "The reason the job failed, if applicable.",
+      "required": false
+    },
+    {
+      "name": "Tags",
+      "type": "array",
+      "description": "A list of tags associated with the transcription job.",
+      "required": false
+    }
+  ]
+}

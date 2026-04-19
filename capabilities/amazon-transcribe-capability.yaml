@@ -1,0 +1,7 @@
+id: amazon-transcribe-capability
+name: Amazon Transcribe Capability
+description: Workflow-oriented capability for Amazon Transcribe
+tags:
+- AWS
+consumes:
+- ref: capabilities/shared/amazon-transcribe-shared.yaml

@@ -20,35 +20,35 @@ externalDocs:
   description: Amazon Transcribe API Reference
   url: https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html
 servers:
-  - url: https://transcribe.{region}.amazonaws.com
-    description: Amazon Transcribe regional endpoint
-    variables:
-      region:
-        default: us-east-1
-        description: AWS region
-        enum:
-          - us-east-1
-          - us-east-2
-          - us-west-1
-          - us-west-2
-          - eu-west-1
-          - eu-west-2
-          - eu-central-1
-          - ap-northeast-1
-          - ap-southeast-1
-          - ap-southeast-2
-          - ap-south-1
-          - ca-central-1
+- url: https://transcribe.{region}.amazonaws.com
+  description: Amazon Transcribe regional endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-west-2
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-south-1
+      - ca-central-1
 paths:
   /#StartTranscriptionJob:
     post:
       operationId: StartTranscriptionJob
-      summary: Amazon Transcribe Start a batch transcription job
+      summary: Amazon Transcribe Start a Batch Transcription Job
       description: >-
         Starts an asynchronous job to transcribe speech to text from an audio
         file stored in Amazon S3.
       tags:
-        - Transcription Jobs
+      - Transcription Jobs
       requestBody:
         required: true
         content:
@@ -56,8 +56,8 @@ paths:
             schema:
               type: object
               required:
-                - TranscriptionJobName
-                - Media
+              - TranscriptionJobName
+              - Media
               properties:
                 TranscriptionJobName:
                   type: string
@@ -84,13 +84,16 @@ paths:
                 properties:
                   TranscriptionJob:
                     $ref: '#/components/schemas/TranscriptionJob'
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#GetTranscriptionJob:
     post:
       operationId: GetTranscriptionJob
-      summary: Amazon Transcribe Get transcription job details
+      summary: Amazon Transcribe Get Transcription Job Details
       description: Returns information about a transcription job.
       tags:
-        - Transcription Jobs
+      - Transcription Jobs
       requestBody:
         required: true
         content:
@@ -98,7 +101,7 @@ paths:
             schema:
               type: object
               required:
-                - TranscriptionJobName
+              - TranscriptionJobName
               properties:
                 TranscriptionJobName:
                   type: string
@@ -113,13 +116,16 @@ paths:
                 properties:
                   TranscriptionJob:
                     $ref: '#/components/schemas/TranscriptionJob'
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#ListTranscriptionJobs:
     post:
       operationId: ListTranscriptionJobs
-      summary: Amazon Transcribe List transcription jobs
+      summary: Amazon Transcribe List Transcription Jobs
       description: Lists transcription jobs with optional filtering.
       tags:
-        - Transcription Jobs
+      - Transcription Jobs
       requestBody:
         required: false
         content:
@@ -130,10 +136,10 @@ paths:
                 Status:
                   type: string
                   enum:
-                    - QUEUED
-                    - IN_PROGRESS
-                    - FAILED
-                    - COMPLETED
+                  - QUEUED
+                  - IN_PROGRESS
+                  - FAILED
+                  - COMPLETED
                 MaxResults:
                   type: integer
                 NextToken:
@@ -150,13 +156,16 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/TranscriptionJob'
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#DeleteTranscriptionJob:
     post:
       operationId: DeleteTranscriptionJob
-      summary: Amazon Transcribe Delete a transcription job
+      summary: Amazon Transcribe Delete a Transcription Job
       description: Deletes a transcription job and any related information.
       tags:
-        - Transcription Jobs
+      - Transcription Jobs
       requestBody:
         required: true
         content:
@@ -164,20 +173,23 @@ paths:
             schema:
               type: object
               required:
-                - TranscriptionJobName
+              - TranscriptionJobName
               properties:
                 TranscriptionJobName:
                   type: string
       responses:
         '200':
           description: Successful response.
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
   /#CreateVocabulary:
     post:
       operationId: CreateVocabulary
-      summary: Amazon Transcribe Create a custom vocabulary
+      summary: Amazon Transcribe Create a Custom Vocabulary
       description: Creates a new custom vocabulary for improving transcription accuracy.
       tags:
-        - Vocabularies
+      - Vocabularies
       requestBody:
         required: true
         content:
@@ -185,8 +197,8 @@ paths:
             schema:
               type: object
               required:
-                - VocabularyName
-                - LanguageCode
+              - VocabularyName
+              - LanguageCode
               properties:
                 VocabularyName:
                   type: string
@@ -210,6 +222,9 @@ paths:
                     type: string
                   VocabularyState:
                     type: string
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
 components:
   schemas:
     TranscriptionJob:
@@ -221,10 +236,10 @@ components:
         TranscriptionJobStatus:
           type: string
           enum:
-            - QUEUED
-            - IN_PROGRESS
-            - FAILED
-            - COMPLETED
+          - QUEUED
+          - IN_PROGRESS
+          - FAILED
+          - COMPLETED
         LanguageCode:
           type: string
         MediaFormat:
@@ -253,8 +268,8 @@ components:
         Value:
           type: string
       required:
-        - Key
-        - Value
+      - Key
+      - Value
   parameters:
     XAmzTarget:
       name: X-Amz-Target
@@ -269,7 +284,7 @@ components:
       in: header
       description: AWS Signature Version 4 authentication.
 security:
-  - aws_sig_v4: []
+- aws_sig_v4: []
 tags:
-  - name: Transcription Jobs
-  - name: Vocabularies
+- name: Transcription Jobs
+- name: Vocabularies

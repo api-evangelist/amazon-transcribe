@@ -1,0 +1,55 @@
+{
+  "name": "TranscriptionJob",
+  "description": "",
+  "type": "object",
+  "properties": [
+    {
+      "name": "TranscriptionJobName",
+      "type": "string",
+      "description": "The name of the transcription job.",
+      "required": false
+    },
+    {
+      "name": "TranscriptionJobStatus",
+      "type": "string",
+      "description": "",
+      "required": false
+    },
+    {
+      "name": "LanguageCode",
+      "type": "string",
+      "description": "",
+      "required": false
+    },
+    {
+      "name": "MediaFormat",
+      "type": "string",
+      "description": "",
+      "required": false
+    },
+    {
+      "name": "Media",
+      "type": "object",
+      "description": "",
+      "required": false
+    },
+    {
+      "name": "Transcript",
+      "type": "object",
+      "description": "",
+      "required": false
+    },
+    {
+      "name": "CreationTime",
+      "type": "string",
+      "description": "",
+      "required": false
+    },
+    {
+      "name": "CompletionTime",
+      "type": "string",
+      "description": "",
+      "required": false
+    }
+  ]
+}
