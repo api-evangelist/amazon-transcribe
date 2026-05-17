@@ -39,11 +39,11 @@ apis:
     url: https://status.aws.amazon.com/
   - type: FAQ
     url: https://aws.amazon.com/transcribe/faqs/
-  - type: Service Level Agreement
+  - type: ServiceLevelAgreement
     url: https://aws.amazon.com/machine-learning/language/sla/
   - type: User Guide
     url: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html
-  - type: API Reference
+  - type: APIReference
     url: https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html
   - type: Code Examples
     url: https://docs.aws.amazon.com/transcribe/latest/dg/service_code_examples.html
@@ -78,7 +78,7 @@ common:
   url: https://repost.aws/knowledge-center
 - type: YouTube
   url: https://www.youtube.com/user/AmazonWebServices
-- type: Stack Overflow
+- type: StackOverflow
   url: https://stackoverflow.com/questions/tagged/amazon-transcribe
 - type: Contact
   url: https://aws.amazon.com/contact-us/
