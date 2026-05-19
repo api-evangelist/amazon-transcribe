@@ -1,0 +1,208 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Transcribe API — Transcription Jobs
+  description: 'Amazon Transcribe API — Transcription Jobs. 4 operations. Lead operation: Amazon Transcribe Delete a Transcription
+    Job. Self-contained Naftiko capability covering one Amazon Transcribe business surface.'
+  tags:
+  - Amazon Transcribe
+  - Transcription Jobs
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_TRANSCRIBE_API_KEY: AMAZON_TRANSCRIBE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-transcribe-transcription-jobs
+    baseUri: https://transcribe.{region}.amazonaws.com
+    description: Amazon Transcribe API — Transcription Jobs business capability. Self-contained, no shared references.
+    resources:
+    - name: '#DeleteTranscriptionJob'
+      path: /#DeleteTranscriptionJob
+      operations:
+      - name: deletetranscriptionjob
+        method: POST
+        description: Amazon Transcribe Delete a Transcription Job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#GetTranscriptionJob'
+      path: /#GetTranscriptionJob
+      operations:
+      - name: gettranscriptionjob
+        method: POST
+        description: Amazon Transcribe Get Transcription Job Details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: '#ListTranscriptionJobs'
+      path: /#ListTranscriptionJobs
+      operations:
+      - name: listtranscriptionjobs
+        method: POST
+        description: Amazon Transcribe List Transcription Jobs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#StartTranscriptionJob'
+      path: /#StartTranscriptionJob
+      operations:
+      - name: starttranscriptionjob
+        method: POST
+        description: Amazon Transcribe Start a Batch Transcription Job
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_TRANSCRIBE_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-transcribe-transcription-jobs-rest
+    port: 8080
+    description: REST adapter for Amazon Transcribe API — Transcription Jobs. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/deletetranscriptionjob
+      name: deletetranscriptionjob
+      description: 'REST surface for #DeleteTranscriptionJob.'
+      operations:
+      - method: POST
+        name: deletetranscriptionjob
+        description: Amazon Transcribe Delete a Transcription Job
+        call: amazon-transcribe-transcription-jobs.deletetranscriptionjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/gettranscriptionjob
+      name: gettranscriptionjob
+      description: 'REST surface for #GetTranscriptionJob.'
+      operations:
+      - method: POST
+        name: gettranscriptionjob
+        description: Amazon Transcribe Get Transcription Job Details
+        call: amazon-transcribe-transcription-jobs.gettranscriptionjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/listtranscriptionjobs
+      name: listtranscriptionjobs
+      description: 'REST surface for #ListTranscriptionJobs.'
+      operations:
+      - method: POST
+        name: listtranscriptionjobs
+        description: Amazon Transcribe List Transcription Jobs
+        call: amazon-transcribe-transcription-jobs.listtranscriptionjobs
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/starttranscriptionjob
+      name: starttranscriptionjob
+      description: 'REST surface for #StartTranscriptionJob.'
+      operations:
+      - method: POST
+        name: starttranscriptionjob
+        description: Amazon Transcribe Start a Batch Transcription Job
+        call: amazon-transcribe-transcription-jobs.starttranscriptionjob
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-transcribe-transcription-jobs-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Transcribe API — Transcription Jobs. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: amazon-transcribe-delete-transcription-job
+      description: Amazon Transcribe Delete a Transcription Job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-transcribe-transcription-jobs.deletetranscriptionjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-transcribe-get-transcription-job
+      description: Amazon Transcribe Get Transcription Job Details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-transcribe-transcription-jobs.gettranscriptionjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-transcribe-list-transcription-jobs
+      description: Amazon Transcribe List Transcription Jobs
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-transcribe-transcription-jobs.listtranscriptionjobs
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-transcribe-start-batch-transcription
+      description: Amazon Transcribe Start a Batch Transcription Job
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-transcribe-transcription-jobs.starttranscriptionjob
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,13 +1,14 @@
 name: Amazon Transcribe
-description: Amazon Transcribe is a speech-to-text service that uses machine learning models to convert audio to text, supporting real-time streaming and batch transcription with automatic speech 
-  recognition (ASR).
+description: Amazon Transcribe is a speech-to-text service that uses machine learning models to convert audio to text, supporting
+  real-time streaming and batch transcription with automatic speech recognition (ASR).
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/transcribe/
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: Amazon Transcribe REST API
-  description: RESTful API for Amazon Transcribe speech-to-text operations including transcription jobs, vocabularies, and real-time streaming transcription.
+  description: RESTful API for Amazon Transcribe speech-to-text operations including transcription jobs, vocabularies, and
+    real-time streaming transcription.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/transcribe/
   baseURL: https://transcribe.amazonaws.com
@@ -49,6 +50,10 @@ apis:
     url: https://docs.aws.amazon.com/transcribe/latest/dg/service_code_examples.html
   - type: Security
     url: https://docs.aws.amazon.com/transcribe/latest/dg/security.html
+  - type: NaftikoCapability
+    url: capabilities/amazon-transcribe-transcription-jobs.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-transcribe-vocabularies.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -86,8 +91,6 @@ common:
   url: https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/rules/amazon-transcribe-spectral-rules.yml
 - type: Vocabulary
   url: https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/vocabulary/amazon-transcribe-vocabulary.yaml
-- type: NaftikoCapability
-  url: https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/capabilities/amazon-transcribe-capability.yaml
 - type: Features
   data:
   - name: Automation
@@ -101,14 +104,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
