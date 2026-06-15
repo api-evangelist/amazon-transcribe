@@ -1,0 +1,586 @@
+{
+  "item": [
+    {
+      "id": "79c47f3f-6039-40f0-b1a1-d9c7de5c6c81",
+      "name": "Transcription Jobs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5cfa677f-5b17-4b47-acb7-d202cc61d230",
+          "name": "Amazon Transcribe Start a Batch Transcription Job",
+          "request": {
+            "name": "Amazon Transcribe Start a Batch Transcription Job",
+            "description": {
+              "content": "Starts an asynchronous job to transcribe speech to text from an audio file stored in Amazon S3.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "StartTranscriptionJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TranscriptionJobName\": \"<string>\",\n  \"Media\": {\n    \"MediaFileUri\": \"<string>\"\n  },\n  \"LanguageCode\": \"<string>\",\n  \"OutputBucketName\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "825e2a7d-9773-464b-a18d-3463e71cb6c1",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "StartTranscriptionJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TranscriptionJobName\": \"<string>\",\n  \"Media\": {\n    \"MediaFileUri\": \"<string>\"\n  },\n  \"LanguageCode\": \"<string>\",\n  \"OutputBucketName\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"TranscriptionJob\": {\n    \"TranscriptionJobName\": \"string\",\n    \"TranscriptionJobStatus\": \"COMPLETED\",\n    \"LanguageCode\": \"string\",\n    \"MediaFormat\": \"string\",\n    \"Media\": {\n      \"MediaFileUri\": \"string\"\n    },\n    \"Transcript\": {\n      \"TranscriptFileUri\": \"string\"\n    },\n    \"CreationTime\": \"1961-12-16T19:04:24.831Z\",\n    \"CompletionTime\": \"1991-11-16T21:56:20.745Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c1687436-818b-4ca3-888a-527f3f78d76f",
+          "name": "Amazon Transcribe Get Transcription Job Details",
+          "request": {
+            "name": "Amazon Transcribe Get Transcription Job Details",
+            "description": {
+              "content": "Returns information about a transcription job.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "GetTranscriptionJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "4c25a006-6d9f-4bd8-bd47-0a2dffedd00e",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "GetTranscriptionJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"TranscriptionJob\": {\n    \"TranscriptionJobName\": \"string\",\n    \"TranscriptionJobStatus\": \"COMPLETED\",\n    \"LanguageCode\": \"string\",\n    \"MediaFormat\": \"string\",\n    \"Media\": {\n      \"MediaFileUri\": \"string\"\n    },\n    \"Transcript\": {\n      \"TranscriptFileUri\": \"string\"\n    },\n    \"CreationTime\": \"1961-12-16T19:04:24.831Z\",\n    \"CompletionTime\": \"1991-11-16T21:56:20.745Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e394fef1-67a3-4868-86e5-c30abcc4dedb",
+          "name": "Amazon Transcribe List Transcription Jobs",
+          "request": {
+            "name": "Amazon Transcribe List Transcription Jobs",
+            "description": {
+              "content": "Lists transcription jobs with optional filtering.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "ListTranscriptionJobs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Status\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "bc69e9b9-4cb3-4e6d-a6ed-5ed238c119b2",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "ListTranscriptionJobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Status\": \"<string>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"TranscriptionJobSummaries\": [\n    {\n      \"TranscriptionJobName\": \"string\",\n      \"TranscriptionJobStatus\": \"QUEUED\",\n      \"LanguageCode\": \"string\",\n      \"MediaFormat\": \"string\",\n      \"Media\": {\n        \"MediaFileUri\": \"string\"\n      },\n      \"Transcript\": {\n        \"TranscriptFileUri\": \"string\"\n      },\n      \"CreationTime\": \"1947-04-03T20:00:41.884Z\",\n      \"CompletionTime\": \"2001-02-13T11:23:56.532Z\"\n    },\n    {\n      \"TranscriptionJobName\": \"string\",\n      \"TranscriptionJobStatus\": \"COMPLETED\",\n      \"LanguageCode\": \"string\",\n      \"MediaFormat\": \"string\",\n      \"Media\": {\n        \"MediaFileUri\": \"string\"\n      },\n      \"Transcript\": {\n        \"TranscriptFileUri\": \"string\"\n      },\n      \"CreationTime\": \"2014-09-24T19:50:52.355Z\",\n      \"CompletionTime\": \"1993-04-10T05:20:22.431Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fc12f1e7-590d-4366-ba7d-c39ac78ebc05",
+          "name": "Amazon Transcribe Delete a Transcription Job",
+          "request": {
+            "name": "Amazon Transcribe Delete a Transcription Job",
+            "description": {
+              "content": "Deletes a transcription job and any related information.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "DeleteTranscriptionJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "ffdf1716-2c37-455f-8a91-af897907bc7e",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DeleteTranscriptionJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c54b6a81-2d7a-4d41-90a6-566cbdde4d1e",
+      "name": "Vocabularies",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "05575c93-7e4b-4753-886d-eb1d5caed27f",
+          "name": "Amazon Transcribe Create a Custom Vocabulary",
+          "request": {
+            "name": "Amazon Transcribe Create a Custom Vocabulary",
+            "description": {
+              "content": "Creates a new custom vocabulary for improving transcription accuracy.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "CreateVocabulary",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"VocabularyName\": \"<string>\",\n  \"LanguageCode\": \"<string>\",\n  \"Phrases\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"VocabularyFileUri\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "4b2306ca-d508-4130-b186-a84bb4e9c119",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateVocabulary",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"VocabularyName\": \"<string>\",\n  \"LanguageCode\": \"<string>\",\n  \"Phrases\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"VocabularyFileUri\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"VocabularyName\": \"string\",\n  \"VocabularyState\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,eu-west-1,eu-west-2,eu-central-1,ap-northeast-1,ap-southeast-1,ap-southeast-2,ap-south-1,ca-central-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://transcribe.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a0ac5b77-4eb7-47f7-8f82-43f96acef4b9",
+    "name": "Amazon Transcribe API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy to add speech-to-text capability to applications. The API supports batch transcription jobs, real-time streaming transcription, custom vocabularies, and vocabulary filters.\n\nContact Support:\n Name: Amazon Web Services",
+      "type": "text/plain"
+    }
+  }
+}
