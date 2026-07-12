@@ -54,6 +54,14 @@ apis:
       - type: Security
         url: https://docs.aws.amazon.com/transcribe/latest/dg/security.html
 common:
+  - type: TrustCenter
+    url: security/amazon-transcribe-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-transcribe-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-transcribe-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-transcribe-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/
   - type: Website
