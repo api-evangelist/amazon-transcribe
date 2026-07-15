@@ -54,6 +54,8 @@ apis:
       - type: Security
         url: https://docs.aws.amazon.com/transcribe/latest/dg/security.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-transcribe-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-transcribe-trust-center.yml
   - type: VulnerabilityDisclosure
