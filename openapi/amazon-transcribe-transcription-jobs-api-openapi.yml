@@ -1,11 +1,7 @@
 openapi: 3.1.0
 info:
-  title: Amazon Transcribe API
-  description: >-
-    Amazon Transcribe is an automatic speech recognition (ASR) service that
-    makes it easy to add speech-to-text capability to applications. The API
-    supports batch transcription jobs, real-time streaming transcription,
-    custom vocabularies, and vocabulary filters.
+  title: Amazon Transcribe Transcription Jobs API
+  description: Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy to add speech-to-text capability to applications. The API supports batch transcription jobs, real-time streaming transcription, custom vocabularies, and vocabulary filters.
   version: '2017-10-26'
   contact:
     name: Amazon Web Services
@@ -16,9 +12,6 @@ info:
   termsOfService: https://aws.amazon.com/service-terms/
   x-logo:
     url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-externalDocs:
-  description: Amazon Transcribe API Reference
-  url: https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html
 servers:
 - url: https://transcribe.{region}.amazonaws.com
   description: Amazon Transcribe regional endpoint
@@ -39,14 +32,16 @@ servers:
       - ap-southeast-2
       - ap-south-1
       - ca-central-1
+security:
+- aws_sig_v4: []
+tags:
+- name: Transcription Jobs
 paths:
   /#StartTranscriptionJob:
     post:
       operationId: StartTranscriptionJob
       summary: Amazon Transcribe Start a Batch Transcription Job
-      description: >-
-        Starts an asynchronous job to transcribe speech to text from an audio
-        file stored in Amazon S3.
+      description: Starts an asynchronous job to transcribe speech to text from an audio file stored in Amazon S3.
       tags:
       - Transcription Jobs
       requestBody:
@@ -183,48 +178,6 @@ paths:
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
-  /#CreateVocabulary:
-    post:
-      operationId: CreateVocabulary
-      summary: Amazon Transcribe Create a Custom Vocabulary
-      description: Creates a new custom vocabulary for improving transcription accuracy.
-      tags:
-      - Vocabularies
-      requestBody:
-        required: true
-        content:
-          application/x-amz-json-1.1:
-            schema:
-              type: object
-              required:
-              - VocabularyName
-              - LanguageCode
-              properties:
-                VocabularyName:
-                  type: string
-                LanguageCode:
-                  type: string
-                Phrases:
-                  type: array
-                  items:
-                    type: string
-                VocabularyFileUri:
-                  type: string
-      responses:
-        '200':
-          description: Successful response.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  VocabularyName:
-                    type: string
-                  VocabularyState:
-                    type: string
-      x-microcks-operation:
-        delay: 0
-        dispatcher: FALLBACK
 components:
   schemas:
     TranscriptionJob:
@@ -260,31 +213,12 @@ components:
         CompletionTime:
           type: string
           format: date-time
-    Tag:
-      type: object
-      properties:
-        Key:
-          type: string
-        Value:
-          type: string
-      required:
-      - Key
-      - Value
-  parameters:
-    XAmzTarget:
-      name: X-Amz-Target
-      in: header
-      required: true
-      schema:
-        type: string
   securitySchemes:
     aws_sig_v4:
       type: apiKey
       name: Authorization
       in: header
       description: AWS Signature Version 4 authentication.
-security:
-- aws_sig_v4: []
-tags:
-- name: Transcription Jobs
-- name: Vocabularies
+externalDocs:
+  description: Amazon Transcribe API Reference
+  url: https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html
