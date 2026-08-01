@@ -1,0 +1,144 @@
+{
+  "info": {
+    "_postman_id": "5cdd66ea-7486-42d9-a4a1-661abd2370c1",
+    "name": "Amazon Transcribe Transcription Jobs Vocabularies API",
+    "description": "Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy to add speech-to-text capability to applications. The API supports batch transcription jobs, real-time streaming transcription, custom vocabularies, and vocabulary filters.\n\nContact Support:\n Name: Amazon Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:56:46.000Z",
+    "updatedAt": "2026-07-28T00:56:46.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5cdd66ea-7486-42d9-a4a1-661abd2370c1"
+  },
+  "item": [
+    {
+      "name": "#CreateVocabulary",
+      "item": [
+        {
+          "name": "Amazon Transcribe Create a Custom Vocabulary",
+          "id": "afd35332-df45-4080-898a-d15871900d43",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"VocabularyName\": \"<string>\",\n  \"LanguageCode\": \"<string>\",\n  \"Phrases\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"VocabularyFileUri\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#CreateVocabulary",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "CreateVocabulary"
+            },
+            "description": "Creates a new custom vocabulary for improving transcription accuracy."
+          },
+          "response": [
+            {
+              "id": "29c8ddac-fa1e-43be-95a6-652d6c358709",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"VocabularyName\": \"<string>\",\n  \"LanguageCode\": \"<string>\",\n  \"Phrases\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"VocabularyFileUri\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#CreateVocabulary",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateVocabulary"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"VocabularyName\": \"<string>\",\n  \"VocabularyState\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T00:56:46.000Z",
+              "updatedAt": "2026-07-28T00:56:46.000Z",
+              "uid": "35240-29c8ddac-fa1e-43be-95a6-652d6c358709"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:46.000Z",
+          "updatedAt": "2026-07-28T00:56:46.000Z",
+          "uid": "35240-afd35332-df45-4080-898a-d15871900d43"
+        }
+      ],
+      "id": "69b4369c-622b-4840-9adf-ca704febbd06",
+      "createdAt": "2026-07-28T00:56:46.000Z",
+      "updatedAt": "2026-07-28T00:56:46.000Z",
+      "uid": "35240-69b4369c-622b-4840-9adf-ca704febbd06"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://transcribe.{{region}}.amazonaws.com"
+    }
+  ]
+}

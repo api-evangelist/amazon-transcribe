@@ -1,0 +1,16 @@
+{
+  "provider": "amazon-transcribe",
+  "sources": [
+    "amazon-transcribe-transcription-jobs-api-openapi.yml",
+    "amazon-transcribe-vocabularies-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-transcribe-transcription-jobs-api-openapi.yml",
+    "amazon-transcribe-vocabularies-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

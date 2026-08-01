@@ -1,0 +1,431 @@
+{
+  "info": {
+    "_postman_id": "84880704-2f60-4670-849c-db746b3c6357",
+    "name": "Amazon Transcribe Transcription Jobs API",
+    "description": "Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy to add speech-to-text capability to applications. The API supports batch transcription jobs, real-time streaming transcription, custom vocabularies, and vocabulary filters.\n\nContact Support:\n Name: Amazon Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:56:45.000Z",
+    "updatedAt": "2026-07-28T00:56:45.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-84880704-2f60-4670-849c-db746b3c6357"
+  },
+  "item": [
+    {
+      "name": "#StartTranscriptionJob",
+      "item": [
+        {
+          "name": "Amazon Transcribe Start a Batch Transcription Job",
+          "id": "478c5d84-461c-4a28-ba32-ba1bea5f534f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TranscriptionJobName\": \"<string>\",\n  \"Media\": {\n    \"MediaFileUri\": \"<string>\"\n  },\n  \"LanguageCode\": \"<string>\",\n  \"OutputBucketName\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#StartTranscriptionJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "StartTranscriptionJob"
+            },
+            "description": "Starts an asynchronous job to transcribe speech to text from an audio file stored in Amazon S3."
+          },
+          "response": [
+            {
+              "id": "8629d53e-9c8c-4db5-8ac3-e76c4675adcf",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TranscriptionJobName\": \"<string>\",\n  \"Media\": {\n    \"MediaFileUri\": \"<string>\"\n  },\n  \"LanguageCode\": \"<string>\",\n  \"OutputBucketName\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#StartTranscriptionJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "StartTranscriptionJob"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"TranscriptionJob\": {\n    \"TranscriptionJobName\": \"<string>\",\n    \"TranscriptionJobStatus\": \"FAILED\",\n    \"LanguageCode\": \"<string>\",\n    \"MediaFormat\": \"<string>\",\n    \"Media\": {\n      \"MediaFileUri\": \"<string>\"\n    },\n    \"Transcript\": {\n      \"TranscriptFileUri\": \"<string>\"\n    },\n    \"CreationTime\": \"<dateTime>\",\n    \"CompletionTime\": \"<dateTime>\"\n  }\n}",
+              "createdAt": "2026-07-28T00:56:46.000Z",
+              "updatedAt": "2026-07-28T00:56:46.000Z",
+              "uid": "35240-8629d53e-9c8c-4db5-8ac3-e76c4675adcf"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:46.000Z",
+          "updatedAt": "2026-07-28T00:56:46.000Z",
+          "uid": "35240-478c5d84-461c-4a28-ba32-ba1bea5f534f"
+        }
+      ],
+      "id": "4243fa33-f2ed-4ffa-9899-8cd651a76645",
+      "createdAt": "2026-07-28T00:56:46.000Z",
+      "updatedAt": "2026-07-28T00:56:46.000Z",
+      "uid": "35240-4243fa33-f2ed-4ffa-9899-8cd651a76645"
+    },
+    {
+      "name": "#GetTranscriptionJob",
+      "item": [
+        {
+          "name": "Amazon Transcribe Get Transcription Job Details",
+          "id": "8b6fc989-14d8-4d20-b8eb-ea6d6022aebc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#GetTranscriptionJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "GetTranscriptionJob"
+            },
+            "description": "Returns information about a transcription job."
+          },
+          "response": [
+            {
+              "id": "a742b0d4-fdf5-48d9-81b6-315eaccdaa37",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#GetTranscriptionJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "GetTranscriptionJob"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"TranscriptionJob\": {\n    \"TranscriptionJobName\": \"<string>\",\n    \"TranscriptionJobStatus\": \"FAILED\",\n    \"LanguageCode\": \"<string>\",\n    \"MediaFormat\": \"<string>\",\n    \"Media\": {\n      \"MediaFileUri\": \"<string>\"\n    },\n    \"Transcript\": {\n      \"TranscriptFileUri\": \"<string>\"\n    },\n    \"CreationTime\": \"<dateTime>\",\n    \"CompletionTime\": \"<dateTime>\"\n  }\n}",
+              "createdAt": "2026-07-28T00:56:46.000Z",
+              "updatedAt": "2026-07-28T00:56:46.000Z",
+              "uid": "35240-a742b0d4-fdf5-48d9-81b6-315eaccdaa37"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:46.000Z",
+          "updatedAt": "2026-07-28T00:56:46.000Z",
+          "uid": "35240-8b6fc989-14d8-4d20-b8eb-ea6d6022aebc"
+        }
+      ],
+      "id": "0188c837-c417-4bb6-9a83-7345c4bf96ab",
+      "createdAt": "2026-07-28T00:56:46.000Z",
+      "updatedAt": "2026-07-28T00:56:46.000Z",
+      "uid": "35240-0188c837-c417-4bb6-9a83-7345c4bf96ab"
+    },
+    {
+      "name": "#ListTranscriptionJobs",
+      "item": [
+        {
+          "name": "Amazon Transcribe List Transcription Jobs",
+          "id": "e182065e-7186-44ed-9f9f-cba153c0d8e0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Status\": \"IN_PROGRESS\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#ListTranscriptionJobs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "ListTranscriptionJobs"
+            },
+            "description": "Lists transcription jobs with optional filtering."
+          },
+          "response": [
+            {
+              "id": "d8b37cb2-3909-47db-8ec7-ee0969e4d092",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"Status\": \"IN_PROGRESS\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#ListTranscriptionJobs",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "ListTranscriptionJobs"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"TranscriptionJobSummaries\": [\n    {\n      \"TranscriptionJobName\": \"<string>\",\n      \"TranscriptionJobStatus\": \"COMPLETED\",\n      \"LanguageCode\": \"<string>\",\n      \"MediaFormat\": \"<string>\",\n      \"Media\": {\n        \"MediaFileUri\": \"<string>\"\n      },\n      \"Transcript\": {\n        \"TranscriptFileUri\": \"<string>\"\n      },\n      \"CreationTime\": \"<dateTime>\",\n      \"CompletionTime\": \"<dateTime>\"\n    },\n    {\n      \"TranscriptionJobName\": \"<string>\",\n      \"TranscriptionJobStatus\": \"FAILED\",\n      \"LanguageCode\": \"<string>\",\n      \"MediaFormat\": \"<string>\",\n      \"Media\": {\n        \"MediaFileUri\": \"<string>\"\n      },\n      \"Transcript\": {\n        \"TranscriptFileUri\": \"<string>\"\n      },\n      \"CreationTime\": \"<dateTime>\",\n      \"CompletionTime\": \"<dateTime>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T00:56:46.000Z",
+              "updatedAt": "2026-07-28T00:56:46.000Z",
+              "uid": "35240-d8b37cb2-3909-47db-8ec7-ee0969e4d092"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:46.000Z",
+          "updatedAt": "2026-07-28T00:56:46.000Z",
+          "uid": "35240-e182065e-7186-44ed-9f9f-cba153c0d8e0"
+        }
+      ],
+      "id": "1d3ae7eb-8589-49d0-8756-0923f5acb404",
+      "createdAt": "2026-07-28T00:56:46.000Z",
+      "updatedAt": "2026-07-28T00:56:46.000Z",
+      "uid": "35240-1d3ae7eb-8589-49d0-8756-0923f5acb404"
+    },
+    {
+      "name": "#DeleteTranscriptionJob",
+      "item": [
+        {
+          "name": "Amazon Transcribe Delete a Transcription Job",
+          "id": "bcd4e088-7d26-4412-b94a-7b9cd2872feb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#DeleteTranscriptionJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "DeleteTranscriptionJob"
+            },
+            "description": "Deletes a transcription job and any related information."
+          },
+          "response": [
+            {
+              "id": "c2651bb0-9638-4774-973f-1abaaf55e1c4",
+              "name": "Successful response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"TranscriptionJobName\": \"<string>\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#DeleteTranscriptionJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DeleteTranscriptionJob"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:56:46.000Z",
+              "updatedAt": "2026-07-28T00:56:46.000Z",
+              "uid": "35240-c2651bb0-9638-4774-973f-1abaaf55e1c4"
+            }
+          ],
+          "createdAt": "2026-07-28T00:56:46.000Z",
+          "updatedAt": "2026-07-28T00:56:46.000Z",
+          "uid": "35240-bcd4e088-7d26-4412-b94a-7b9cd2872feb"
+        }
+      ],
+      "id": "890ab4d0-575f-48f2-8e66-df6de4bd6792",
+      "createdAt": "2026-07-28T00:56:46.000Z",
+      "updatedAt": "2026-07-28T00:56:46.000Z",
+      "uid": "35240-890ab4d0-575f-48f2-8e66-df6de4bd6792"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://transcribe.{{region}}.amazonaws.com"
+    }
+  ]
+}
