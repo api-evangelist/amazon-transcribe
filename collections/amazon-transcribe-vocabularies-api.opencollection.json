@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Transcribe Transcription Jobs Vocabularies API",
+    "version": "2017-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Vocabularies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Transcribe Create a Custom Vocabulary",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://transcribe.{region}.amazonaws.com/#CreateVocabulary",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new custom vocabulary for improving transcription accuracy."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

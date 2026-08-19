@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Transcribe Transcription Jobs API",
+    "version": "2017-10-26"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Transcription Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Transcribe Start a Batch Transcription Job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://transcribe.{region}.amazonaws.com/#StartTranscriptionJob",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Starts an asynchronous job to transcribe speech to text from an audio file stored in Amazon S3."
+        },
+        {
+          "info": {
+            "name": "Amazon Transcribe Get Transcription Job Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://transcribe.{region}.amazonaws.com/#GetTranscriptionJob",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns information about a transcription job."
+        },
+        {
+          "info": {
+            "name": "Amazon Transcribe List Transcription Jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://transcribe.{region}.amazonaws.com/#ListTranscriptionJobs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists transcription jobs with optional filtering."
+        },
+        {
+          "info": {
+            "name": "Amazon Transcribe Delete a Transcription Job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://transcribe.{region}.amazonaws.com/#DeleteTranscriptionJob",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deletes a transcription job and any related information."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
