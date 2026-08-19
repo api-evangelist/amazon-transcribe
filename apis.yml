@@ -2,6 +2,7 @@ name: Amazon Transcribe
 description: >-
   Amazon Transcribe is a speech-to-text service that uses machine learning models to convert audio to text, supporting
   real-time streaming and batch transcription with automatic speech recognition (ASR).
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
