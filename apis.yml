@@ -177,6 +177,13 @@ maintainers:
 tags:
   - Audio Processing
   - AWS
+  - Machine-Learning
+  - Speech Recognition
+  - Speech-to-Text
+  - Transcription
+tags_raw:
+  - Audio Processing
+  - AWS
   - Machine Learning
   - Speech Recognition
   - Speech-To-Text
