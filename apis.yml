@@ -200,3 +200,5 @@ tags_raw:
   - Speech Recognition
   - Speech-To-Text
   - Transcription
+x-parent: aws
+x-relationship: product

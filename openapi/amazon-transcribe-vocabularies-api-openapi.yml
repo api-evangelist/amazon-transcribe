@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Amazon Transcribe Transcription Jobs Vocabularies API
   description: Amazon Transcribe is an automatic speech recognition (ASR) service that makes it easy to add speech-to-text capability to applications. The API supports batch transcription jobs, real-time streaming transcription, custom vocabularies, and vocabulary filters.
