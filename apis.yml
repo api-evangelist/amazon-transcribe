@@ -190,7 +190,7 @@ maintainers:
 tags:
   - Audio Processing
   - AWS
-  - Machine-Learning
+  - Machine Learning
   - Speech Recognition
   - Speech-to-Text
   - Transcription
@@ -201,5 +201,6 @@ tags_raw:
   - Speech Recognition
   - Speech-To-Text
   - Transcription
-x-parent: aws
+  - Machine-Learning
+x-parent: amazon-web-services
 x-relationship: product
