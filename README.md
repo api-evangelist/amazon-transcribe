@@ -1,4 +1,4 @@
-# Amazon Transcribe (amazon-transcribe)
+# Amazon Transcribe
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,85 +66,177 @@
 
 Amazon Transcribe is a speech-to-text service that uses machine learning models to convert audio to text, supporting real-time streaming and batch transcription with automatic speech recognition (ASR).
 
-**APIs.json:** [https://aws.amazon.com/transcribe/](https://aws.amazon.com/transcribe/)
+**Areas:** Audio Processing · AWS · Machine Learning · Speech Recognition · Speech-to-Text · Transcription
 
-## Tags
+## Amazon Transcribe on APIs.io
 
-- Audio Processing
-- AWS
-- Machine Learning
-- Speech Recognition
-- Speech-To-Text
-- Transcription
+Everything profiled for Amazon Transcribe is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-transcribe/](https://apis.io/providers/amazon-transcribe/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (10)
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+- [Amazon Transcribe Transcription Jobs API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-transcription-jobs-api/) — The Transcription Jobs API from Amazon Transcribe — 4 operation(s) for transcription jobs.
+- [Amazon Transcribe Vocabularies API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-vocabularies-api/) — The Vocabularies API from Amazon Transcribe — 1 operation(s) for vocabularies.
+- [Amazon Transcribe Transcribe Call Analytics Category API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-call-analytics-category-api/) — The Transcribe Call Analytics Category API from Amazon Transcribe — 5 operation(s) for transcribe call analytics category.
+- [Amazon Transcribe Transcribe Call Analytics Job API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-call-analytics-job-api/) — The Transcribe Call Analytics Job API from Amazon Transcribe — 4 operation(s) for transcribe call analytics job.
+- [Amazon Transcribe Transcribe Language Model API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-language-model-api/) — The Transcribe Language Model API from Amazon Transcribe — 5 operation(s) for transcribe language model.
+- [Amazon Transcribe Transcribe Medical Scribe Job API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-medical-scribe-job-api/) — The Transcribe Medical Scribe Job API from Amazon Transcribe — 4 operation(s) for transcribe medical scribe job.
+- [Amazon Transcribe Transcribe Medical Transcription Job API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-medical-transcription-job-api/) — The Transcribe Medical Transcription Job API from Amazon Transcribe — 4 operation(s) for transcribe medical transcription job.
+- [Amazon Transcribe Transcribe Medical Vocabulary API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-medical-vocabulary-api/) — The Transcribe Medical Vocabulary API from Amazon Transcribe — 5 operation(s) for transcribe medical vocabulary.
+- [Amazon Transcribe Transcribe Operations API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-operations-api/) — The Transcribe Operations API from Amazon Transcribe — 3 operation(s) for transcribe operations.
+- [Amazon Transcribe Transcribe Vocabulary Filter API](https://apis.io/apis/amazon-transcribe/amazon-transcribe-vocabulary-filter-api/) — The Transcribe Vocabulary Filter API from Amazon Transcribe — 5 operation(s) for transcribe vocabulary filter.
 
-## APIs
+### Published properties
 
-### Amazon Transcribe REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-RESTful API for Amazon Transcribe speech-to-text operations including transcription jobs, vocabularies, and real-time streaming transcription.
+#### Agentic access (1)
 
-- **Human URL:** [https://aws.amazon.com/transcribe/](https://aws.amazon.com/transcribe/)
-- **Base URL:** `https://transcribe.amazonaws.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Amazon Transcribe Agentic Access](https://apis.io/agentic-access/amazon-transcribe/amazon-transcribe-agentic-access/)
 
-- AWS
-- Machine Learning
-- Speech-To-Text
-- Transcription
+#### JSON Schema (3)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/transcribe/latest/APIReference/)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/openapi/amazon-transcribe-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](https://api.apis.guru/v2/specs/amazonaws.com/transcribe/2017-10-26/openapi.yaml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [JSON Schema](json-schema/amazon-transcribe-job-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/amazon-transcribe-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Pricing](https://aws.amazon.com/transcribe/pricing/)
-- [Getting Started](https://aws.amazon.com/transcribe/getting-started/)
-- [Authentication](https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonParameters.html)
-- [S D Ks](https://aws.amazon.com/tools/)
-- [Status Page](https://status.aws.amazon.com/)
-- [F A Q](https://aws.amazon.com/transcribe/faqs/)
-- [Service Level Agreement](https://aws.amazon.com/machine-learning/language/sla/)
-- [User  Guide](https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html)
-- [API Reference](https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html)
-- [Code  Examples](https://docs.aws.amazon.com/transcribe/latest/dg/service_code_examples.html)
-- [Security](https://docs.aws.amazon.com/transcribe/latest/dg/security.html)
-- [Postman Collection](collections/amazon-transcribe.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-transcribe.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Amazon Transcribe Transcription Job](https://apis.io/schemas/amazon-transcribe/amazon-transcribe-job/)
+- [Tag](https://apis.io/schemas/amazon-transcribe/amazon-transcribe-tag/)
+- [TranscriptionJob](https://apis.io/schemas/amazon-transcribe/amazon-transcribe-transcription-job/)
 
-## Common Properties
+#### JSON Structure (3)
 
-- [Portal](https://aws.amazon.com/)
+Data models expressed in JSON Structure.
+
+- [Amazon Transcribe Job Structure](https://apis.io/json-structure/amazon-transcribe/amazon-transcribe-job-structure/)
+- [Amazon Transcribe Tag Structure](https://apis.io/json-structure/amazon-transcribe/amazon-transcribe-tag-structure/)
+- [Amazon Transcribe Transcription Job Structure](https://apis.io/json-structure/amazon-transcribe/amazon-transcribe-transcription-job-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Transcribe Context](https://apis.io/jsonld/amazon-transcribe/amazon-transcribe-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Transcribe Vocabulary](https://apis.io/vocabularies/amazon-transcribe/amazon-transcribe-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Amazon Transcribe Example](https://apis.io/examples/amazon-transcribe/amazon-transcribe-example/)
+
+#### Collections (5)
+
+Postman and Open Collection request collections.
+
+- [Amazon Transcribe API](https://apis.io/collections/amazon-transcribe/open-amazon-transcribe/)
+- [Amazon Transcribe Transcription Jobs API](https://apis.io/collections/amazon-transcribe/open-amazon-transcribe-transcription-jobs-api/)
+- [Amazon Transcribe Transcription Jobs Vocabularies API](https://apis.io/collections/amazon-transcribe/open-amazon-transcribe-vocabularies-api/)
+- [Amazon Transcribe Transcription Jobs API](https://apis.io/collections/amazon-transcribe/postman-amazon-transcribe-transcription-jobs-api/)
+- [Amazon Transcribe Transcription Jobs Vocabularies API](https://apis.io/collections/amazon-transcribe/postman-amazon-transcribe-vocabularies-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Transcribe — jsonschema rules](https://apis.io/rules/amazon-transcribe/amazon-transcribe-jsonschema-spectral-rules/)
+- [Amazon Transcribe API Rules](https://apis.io/rules/amazon-transcribe/amazon-transcribe-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Transcribe Authentication](https://apis.io/security/amazon-transcribe/amazon-transcribe-authentication/)
+- [Amazon Transcribe Domain Security](https://apis.io/security/amazon-transcribe/amazon-transcribe-domain-security/)
+- [Amazon Transcribe Trust Center](https://apis.io/security/amazon-transcribe/amazon-transcribe-trust-center/)
+- [Amazon Transcribe Vulnerability Disclosure](https://apis.io/security/amazon-transcribe/amazon-transcribe-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Transcribe Plans Pricing](https://apis.io/plans/amazon-transcribe/amazon-transcribe-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Transcribe Rate Limits](https://apis.io/rate-limits/amazon-transcribe/amazon-transcribe-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Transcribe Finops](https://apis.io/finops/amazon-transcribe/amazon-transcribe-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/transcribe/)
 - [Documentation](https://docs.aws.amazon.com/transcribe/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/machine-learning/)
-- [GitHub Organization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/transcribe/)
-- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Knowledge  Center](https://repost.aws/knowledge-center)
-- [YouTube](https://www.youtube.com/user/AmazonWebServices)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/amazon-transcribe)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [Spectral Rules](https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/rules/amazon-transcribe-spectral-rules.yml)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/vocabulary/amazon-transcribe-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](https://aws.amazon.com/partners/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 57.1** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 58.1 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 72.6 |
+| Access clarity | 53.9 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 32.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-transcribe/](https://apis.io/providers/amazon-transcribe/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Transcribe: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-transcribe/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
