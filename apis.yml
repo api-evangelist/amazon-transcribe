@@ -1,0 +1,310 @@
+name: Amazon Transcribe
+description: >-
+  Amazon Transcribe is a speech-to-text service that uses machine learning models to convert audio to text, supporting
+  real-time streaming and batch transcription with automatic speech recognition (ASR).
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
+specificationVersion: '0.23'
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  - security
+  generated: '2026-09-03'
+  method: derived
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+url: https://aws.amazon.com/transcribe/
+created: '2024-01-15'
+modified: '2026-05-19'
+apis:
+- aid: amazon-transcribe:amazon-transcribe-transcription-jobs-api
+  name: Amazon Transcribe Transcription Jobs API
+  description: >-
+    The Transcription Jobs API from Amazon Transcribe — 4 operation(s) for transcription jobs.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcription Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-transcription-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/transcribe/latest/APIReference/
+  - type: JSONSchema
+    url: json-schema/amazon-transcribe-job-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-transcribe-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/transcribe/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/transcribe/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonParameters.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/transcribe/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/machine-learning/language/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/transcribe/latest/dg/service_code_examples.html
+  - type: Security
+    url: https://docs.aws.amazon.com/transcribe/latest/dg/security.html
+- aid: amazon-transcribe:amazon-transcribe-vocabularies-api
+  name: Amazon Transcribe Vocabularies API
+  description: The Vocabularies API from Amazon Transcribe — 1 operation(s) for vocabularies.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Vocabularies
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-vocabularies-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/transcribe/latest/APIReference/
+  - type: JSONSchema
+    url: json-schema/amazon-transcribe-job-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-transcribe-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/transcribe/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/transcribe/getting-started/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/transcribe/latest/APIReference/CommonParameters.html
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: StatusPage
+    url: https://status.aws.amazon.com/
+  - type: FAQ
+    url: https://aws.amazon.com/transcribe/faqs/
+  - type: ServiceLevelAgreement
+    url: https://aws.amazon.com/machine-learning/language/sla/
+  - type: User Guide
+    url: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/transcribe/latest/APIReference/Welcome.html
+  - type: Code Examples
+    url: https://docs.aws.amazon.com/transcribe/latest/dg/service_code_examples.html
+  - type: Security
+    url: https://docs.aws.amazon.com/transcribe/latest/dg/security.html
+- aid: amazon-transcribe:amazon-transcribe-call-analytics-category-api
+  name: Amazon Transcribe Transcribe Call Analytics Category API
+  description: >-
+    The Transcribe Call Analytics Category API from Amazon Transcribe — 5 operation(s) for transcribe
+    call analytics category.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Call Analytics Category
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-call-analytics-category-api-openapi.yml
+- aid: amazon-transcribe:amazon-transcribe-call-analytics-job-api
+  name: Amazon Transcribe Transcribe Call Analytics Job API
+  description: >-
+    The Transcribe Call Analytics Job API from Amazon Transcribe — 4 operation(s) for transcribe call
+    analytics job.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Call Analytics Job
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-call-analytics-job-api-openapi.yml
+- aid: amazon-transcribe:amazon-transcribe-language-model-api
+  name: Amazon Transcribe Transcribe Language Model API
+  description: >-
+    The Transcribe Language Model API from Amazon Transcribe — 5 operation(s) for transcribe language
+    model.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Language Model
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-language-model-api-openapi.yml
+- aid: amazon-transcribe:amazon-transcribe-medical-scribe-job-api
+  name: Amazon Transcribe Transcribe Medical Scribe Job API
+  description: >-
+    The Transcribe Medical Scribe Job API from Amazon Transcribe — 4 operation(s) for transcribe medical
+    scribe job.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Medical Scribe Job
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-medical-scribe-job-api-openapi.yml
+- aid: amazon-transcribe:amazon-transcribe-medical-transcription-job-api
+  name: Amazon Transcribe Transcribe Medical Transcription Job API
+  description: >-
+    The Transcribe Medical Transcription Job API from Amazon Transcribe — 4 operation(s) for transcribe
+    medical transcription job.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Medical Transcription Job
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-medical-transcription-job-api-openapi.yml
+- aid: amazon-transcribe:amazon-transcribe-medical-vocabulary-api
+  name: Amazon Transcribe Transcribe Medical Vocabulary API
+  description: >-
+    The Transcribe Medical Vocabulary API from Amazon Transcribe — 5 operation(s) for transcribe medical
+    vocabulary.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Medical Vocabulary
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-medical-vocabulary-api-openapi.yml
+- aid: amazon-transcribe:amazon-transcribe-operations-api
+  name: Amazon Transcribe Transcribe Operations API
+  description: >-
+    The Transcribe Operations API from Amazon Transcribe — 3 operation(s) for transcribe operations.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-operations-api-openapi.yml
+- aid: amazon-transcribe:amazon-transcribe-vocabulary-filter-api
+  name: Amazon Transcribe Transcribe Vocabulary Filter API
+  description: >-
+    The Transcribe Vocabulary Filter API from Amazon Transcribe — 5 operation(s) for transcribe vocabulary
+    filter.
+  humanURL: https://aws.amazon.com/transcribe/
+  baseURL: https://transcribe.amazonaws.com
+  tags:
+  - Transcribe Vocabulary Filter
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-transcribe-vocabulary-filter-api-openapi.yml
+common:
+  - type: CapabilityMap
+    url: capabilities/amazon-transcribe-capability-edges.yml
+    name: Amazon Transcribe Business Capability Map
+  - type: Plans
+    url: plans/amazon-transcribe-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/amazon-transcribe-rate-limits.yml
+  - type: FinOps
+    url: finops/amazon-transcribe-finops.yml
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-transcribe/overview
+  - type: AgenticAccess
+    url: agentic-access/amazon-transcribe-agentic-access.yml
+  - type: TrustCenter
+    url: security/amazon-transcribe-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-transcribe-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-transcribe-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-transcribe-authentication.yml
+  - type: Portal
+    url: https://aws.amazon.com/
+  - type: Website
+    url: https://aws.amazon.com/transcribe/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/transcribe/
+  - type: TermsOfService
+    url: https://aws.amazon.com/service-terms/
+  - type: PrivacyPolicy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: Blog
+    url: https://aws.amazon.com/blogs/machine-learning/
+  - type: GitHubOrganization
+    url: https://github.com/aws
+  - type: Console
+    url: https://console.aws.amazon.com/transcribe/
+  - type: Signup
+    url: https://signin.aws.amazon.com/signup?request_type=register
+  - type: Login
+    url: https://aws.amazon.com/console/
+  - type: StatusPage
+    url: https://health.aws.amazon.com/health/status
+  - type: Knowledge Center
+    url: https://repost.aws/knowledge-center
+  - type: YouTube
+    url: https://www.youtube.com/user/AmazonWebServices
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/amazon-transcribe
+  - type: Contact
+    url: https://aws.amazon.com/contact-us/
+  - type: SpectralRules
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/rules/amazon-transcribe-spectral-rules.yml
+  - type: Vocabulary
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/amazon-transcribe/refs/heads/main/vocabulary/amazon-transcribe-vocabulary.yaml
+  - type: Features
+    data:
+      - name: Automation
+        description: Automate operational tasks with Amazon Transcribe.
+      - name: API Access
+        description: Programmatic access to Amazon Transcribe resources.
+  - type: UseCases
+    data:
+      - name: Cloud Operations
+        description: Use Amazon Transcribe to manage and automate cloud operations.
+  - type: Integrations
+    url: https://aws.amazon.com/partners/
+integrations:
+  - name: Partner Programs
+  - name: Resources
+  - name: Success Stories
+  - name: Work with an AWS Partner
+  - name: AWS Marketplace
+  - name: AWS Partner Central
+  - name: Partner Paths
+  - name: co-sell with AWS
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com
+tags:
+  - Audio Processing
+  - Amazon Web Services
+  - Machine Learning
+  - Speech Recognition
+  - Speech-to-Text
+  - Transcription
+tags_raw:
+  - Audio Processing
+  - AWS
+  - Machine Learning
+  - Speech Recognition
+  - Speech-To-Text
+  - Transcription
+  - Machine-Learning
+x-parent: amazon-web-services
+x-relationship: product
